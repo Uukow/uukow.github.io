@@ -1,379 +1,555 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
+    <script>
+    (function () {
+        try {
+            var k = "uukow-theme";
+            var d = document.documentElement;
+            var s = localStorage.getItem(k);
+            if (s === "light" || s === "dark") d.setAttribute("data-theme", s);
+            else if (window.matchMedia("(prefers-color-scheme: light)").matches) d.setAttribute("data-theme", "light");
+            else d.setAttribute("data-theme", "dark");
+        } catch (e) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    })();
+    </script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdulkadir Uukow Portfolio</title>
+    <meta name="description" content="Abdulkadir Uukow — software engineer building full-stack web applications, platforms for NGOs and commerce, and polished front-end experiences.">
+    <meta id="meta-theme-color" name="theme-color" content="#0d1117">
+    <title>Abdulkadir Uukow · Software Engineer</title>
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    
-    <!-- custom css file link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    
-<!-- header section starts  -->
 
-<header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <div id="menu-bars" class="fas fa-bars"></div>
-
-    <nav class="navbar">
-        <a href="#home">home</a>
-        <a href="#about">about</a>
-        <a href="#services">services</a>
-        <a href="#portfolio">portfolio</a>
-        <a href="#blogs">Projects</a>
-        <a href="#contact">contact</a>
+<header class="site-header">
+    <a class="logo" href="#home" aria-label="Home">AU<span class="logo-dot">.</span></a>
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
     </nav>
-
+    <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark and light theme" title="Theme">
+            <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true"></i>
+            <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--light" aria-hidden="true"></i>
+        </button>
+        <a class="icon-link" href="https://github.com/Uukow" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a class="btn btn--small btn--outline" href="https://wa.link/3lznht" target="_blank" rel="noopener noreferrer">Let&apos;s talk</a>
+    </div>
+    <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+    </button>
 </header>
 
-<!-- header section ends -->
-
-<!-- home section starts  -->
+<main id="main">
 
 <section class="home" id="home">
+    <div id="particles-js" aria-hidden="true"></div>
+    <div class="home__grid" aria-hidden="true"></div>
 
-    <div id="particles-js"></div>
-
-    <div class="content">
-        <img class="tilt" src="images/home-pic.jpg" alt="">
-        <h3> Abdulkadir <span>Uukow</span> </h3>
-        <p> i am a <span class="typing-text"> front end developer </span> </p>
-        <a href="#about" class="btn">about me</a>
-    </div>
-
-</section>
-
-<!-- home section ends -->
-
-<!-- about section starts  -->
-
-<section class="about" id="about">
-
-    <h1 class="heading"> about <span>me</span> </h1>
-
-    <div class="row">
-
-        <div class="image">
-            <img class="tilt" src="images/about-pic.jpg" alt="">
+    <div class="home__inner">
+        <div class="home__visual">
+            <div class="home__photo-frame tilt">
+                <img src="images/home-pic.jpg" alt="Portrait of Abdulkadir Uukow">
+            </div>
         </div>
-
-        <div class="content">
-            <h3> my name is <span> Abdulkadir Uukow </span> </h3>
-            <p class="info">Hello! I'm Abdulkadir Uukow, and I have years of experience in graphic design, web development, content writing, and video editing. My skills in graphic design will help you connect with your target audience, while my web development expertise will create responsive and user-friendly sites. My content creation skills cover a broad spectrum, providing you with well-written and compelling content. Lastly, I excel in delivering high-quality, engaging videos. Check out my portfolio website to see my work.</p>
-            <div class="box-container">
-                <div class="box">
-                    <p> <span> age: </span> <span style="filter: blur(6px);">00 </span></p>
-                    <p> <span> gender: </span> male </p>
-                    <p> <span> experience  : </span> 3 years+ </p>
-                    <p> <span> freelance : </span> available </p>
+        <div class="home__intro">
+            <p class="eyebrow">Software engineer · Mogadishu</p>
+            <h1 class="home__title">Abdulkadir <span class="home__title-accent">Uukow</span></h1>
+            <p class="home__role">I build <span class="typing-text">reliable web platforms</span></p>
+            <p class="home__lede">I architect and ship maintainable systems: relational data models, HTTP APIs, and interfaces teams can extend — from NGO platforms and commerce to internal dashboards.</p>
+            <div class="home__code code-window">
+                <div class="code-window__chrome" aria-hidden="true">
+                    <span></span><span></span><span></span>
                 </div>
-                <div class="box">
-                    <p> <span> language : </span> Somali / Arabic / english </p>
-                    <p> <span> phone : </span> +252617119990 </p>
-                    <p> <span> email : </span> Abdulkadiruukow@gmail.com </p>
-                    <p> <span> address : </span> Wadajir, Mugadishu - Somalia </p>
+                <pre class="code-window__body mono"><code><span class="code-line"><span class="code-muted">// What I optimize for</span></span>
+<span class="code-line"><span class="code-k">const</span> delivery = {</span>
+<span class="code-line">  <span class="code-prop">stack</span>: [<span class="code-s">&apos;JS&apos;</span>, <span class="code-s">&apos;React&apos;</span>, <span class="code-s">&apos;PHP&apos;</span>, <span class="code-s">&apos;Node&apos;</span>, <span class="code-s">&apos;SQL&apos;</span>],</span>
+<span class="code-line">  <span class="code-prop">goal</span>: <span class="code-s">&apos;systems that stay understandable&apos;</span></span>
+<span class="code-line">};</span></code></pre>
+            </div>
+            <div class="home__actions">
+                <a href="#projects" class="btn">Selected work</a>
+                <a href="https://github.com/Uukow" class="btn btn--ghost" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <ul class="home__metrics" aria-label="Highlights">
+                <li><strong class="mono">11+</strong><span>projects delivered</span></li>
+                <li><strong class="mono">3+</strong><span>years building</span></li>
+                <li><strong class="mono">Full-stack</strong><span>web engineering</span></li>
+            </ul>
+            <ul class="home__meta">
+                <li><span class="mono">3+</span> yrs shipping</li>
+                <li>Open to freelance</li>
+                <li>Somali · Arabic · English</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="about section" id="about">
+    <div class="section__head">
+        <span class="section__num mono">01</span>
+        <p class="eyebrow">Profile</p>
+        <h2 class="section__title">About</h2>
+        <p class="section__subtitle">End-to-end ownership on lean teams — specification through deployment and handoff.</p>
+    </div>
+
+    <div class="about__grid">
+        <div class="about__photo tilt">
+            <img src="images/about-pic.jpg" alt="Abdulkadir Uukow working">
+        </div>
+        <div class="about__copy">
+            <h3 class="about__name">Abdulkadir Uukow</h3>
+            <p class="about__text">I&apos;m a software engineer shipping production web apps with PHP or Node.js backends, MySQL, and React or disciplined vanilla/CSS front ends. I optimize for readable codebases, explicit data boundaries, and UI states that fail gracefully — the kind of work that survives real operators and content editors. Design and media are adjacent strengths when brand and product need to stay aligned.</p>
+            <div class="about__panels">
+                <div class="panel">
+                    <h4 class="panel__title">Focus</h4>
+                    <ul class="panel__list">
+                        <li>Full-stack web apps &amp; dashboards</li>
+                        <li>NGO &amp; association platforms</li>
+                        <li>E-commerce and booking flows</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h4 class="panel__title">Stack</h4>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">React</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">WordPress</span>
+                    </div>
                 </div>
             </div>
-            <a href="https://wa.link/3lznht" class="btn">Contact Me</a>
+            <div class="about__facts">
+                <div class="fact"><span class="fact__label">Experience</span><span class="fact__value">3+ years</span></div>
+                <div class="fact"><span class="fact__label">Availability</span><span class="fact__value">Freelance</span></div>
+                <div class="fact"><span class="fact__label">Email</span><span class="fact__value"><a href="mailto:Abdulkadiruukow@gmail.com">Abdulkadiruukow@gmail.com</a></span></div>
+                <div class="fact"><span class="fact__label">Phone</span><span class="fact__value"><a href="tel:+252617119990">+252 61 711 9990</a></span></div>
+                <div class="fact fact--wide"><span class="fact__label">Location</span><span class="fact__value">Wadajir, Mogadishu · Somalia</span></div>
+            </div>
+            <a href="https://wa.link/3lznht" class="btn" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
         </div>
-
     </div>
-
 </section>
 
-<!-- about section ends -->
-
-<!-- services section starts  -->
-
-<section class="services" id="services">
-
-    <h1 class="heading"> <span> my </span> services </h1>
-
-    <div class="box-container">
-
-        <div class="box tilt">
-            <i class="fas fa-code"></i>
-            <h3>web development</h3>
-            <p>I am an experienced web developer proficient in HTML, CSS, JavaScript, PHP, and MySQL. I stay updated with the latest trends to ensure high-quality work. Trust me to deliver outstanding results for your project, be it a simple landing page or a complex web application.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-paint-brush"></i>
-            <h3>graphic design</h3>
-            <p>Experienced graphic designer with expertise in logo, branding and designing software using by standards to project details. create modern logos or branding strategies to elevate your brand recognition.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-bullhorn"></i>
-            <h3>Youtuber and Facebooker</h3>
-            <p>Have a passion to creating content and engaging with my audience on YouTube and Facebook. And producing entertaining videos on YouTube and share visually stunning media on Facebook to connect with people and make a difference online.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-envelope"></i>
-            <h3>email marketing</h3>
-            <p>As an email marketing expert, I can help you strengthen customer relationships through targeted campaigns. With email marketing, you can inform, educate, and engage your audience to boost sales and retention. Let me help you craft the perfect email strategy to achieve your goals. Improve customer relations today - let's get started!</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fas fa-mobile"></i>
-            <h3>Video Editting</h3>
-            <p>I create stunning videos with top-notch editing from start to finish. With technical expertise, creativity, and attention to detail, I deliver high-quality videos that exceed your expectations. Trust me to create and enhance your videos with my extensive knowledge of video editing and post-production techniques.</p>
-        </div>
-
-        <div class="box tilt">
-            <i class="fab fa-wordpress"></i>
-            <h3>wordpress</h3>
-            <p>I have experienced building websites using WordPress and have made many sites that are now online. The websites I have built include e-commerce, blog, and non-governmental Websites.</p>
-        </div>
-
+<section class="expertise section" id="expertise">
+    <div class="section__head">
+        <span class="section__num mono">02</span>
+        <p class="eyebrow">Capabilities</p>
+        <h2 class="section__title">Expertise</h2>
+        <p class="section__subtitle">Scope you&apos;d expect from a senior IC: systems thinking, execution, and clear documentation.</p>
     </div>
 
-</section>
-
-<!-- services section ends -->
-
-<!-- portfolio section starts  -->
-
-<section class="portfolio" id="portfolio">
-
-    <h1 class="heading"> <span> my </span> portfolio </h1>
-
-    <div class="box-container">
-
-        <div class="box tilt">
-            <img src="images/img-1.jpg" alt="">
-            <div class="content">
-                <a href="#" class="btn">learn more</a>
-            </div>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/img-2.jpg" alt="">
-            <div class="content">
-                <a href="#" class="btn">learn more</a>
-            </div>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/img-3.jpg" alt="">
-            <div class="content">
-                <a href="#" class="btn">learn more</a>
-            </div>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/img-4.jpg" alt="">
-            <div class="content">
-                <a href="#" class="btn">learn more</a>
-            </div>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/img-5.jpg" alt="">
-            <div class="content">
-                <a href="#" class="btn">learn more</a>
-            </div>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/img-6.jpg" alt="">
-            <div class="content">
-                <a href="#" class="btn">learn more</a>
-            </div>
-        </div>
-
+    <div class="cards">
+        <article class="card tilt">
+            <div class="card__icon"><i class="fas fa-layer-group"></i></div>
+            <h3 class="card__title">Full-stack engineering</h3>
+            <p class="card__text">End-to-end builds: data modeling, PHP or Node.js APIs, auth and admin flows, and documented handoff so your team can extend the system.</p>
+        </article>
+        <article class="card tilt">
+            <div class="card__icon"><i class="fab fa-react"></i></div>
+            <h3 class="card__title">Front-end &amp; UX</h3>
+            <p class="card__text">React SPAs, responsive layouts, and performance-conscious UI — booking flows, marketing sites, and internal tools that stay usable on real devices.</p>
+        </article>
+        <article class="card tilt">
+            <div class="card__icon"><i class="fas fa-database"></i></div>
+            <h3 class="card__title">Backend &amp; MySQL</h3>
+            <p class="card__text">Relational design, migrations-minded SQL, and pragmatic integration patterns (including AJAX-heavy dashboards where teams already work).</p>
+        </article>
+        <article class="card tilt">
+            <div class="card__icon"><i class="fab fa-wordpress"></i></div>
+            <h3 class="card__title">WordPress delivery</h3>
+            <p class="card__text">Custom themes and structured content for NGOs, blogs, and storefronts — balancing editor-friendly workflows with stable production releases.</p>
+        </article>
+        <article class="card tilt">
+            <div class="card__icon"><i class="fas fa-palette"></i></div>
+            <h3 class="card__title">Visual systems</h3>
+            <p class="card__text">Brand-aligned UI, graphics, and motion when projects need a single owner across design and implementation.</p>
+        </article>
+        <article class="card tilt">
+            <div class="card__icon"><i class="fas fa-video"></i></div>
+            <h3 class="card__title">Media production</h3>
+            <p class="card__text">Video editing and social content for campaigns that sit alongside the web property — consistent tone from landing page to channel.</p>
+        </article>
     </div>
-    
 </section>
 
-<!-- portfolio section ends -->
-
-<!-- blogs section starts  -->
-
-<section class="blogs" id="blogs">
-
-    <h1 class="heading"> <span> my </span> Projects </h1>
-
-    <div class="box-container">
-        
-        <div class="box tilt">
-            <img src="images/blog-img-1.jpg" alt="">
-            <h3> Feynuus Shop </h3>
-            <p>This website is the one I designed and created. It's a e-commerce Website that buy Products is located into Mogadishu-somalia </p>
-            <a href="https://feynuusshop/" class="btn">learn more</a>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/blog-img-2.jpg" alt="">
-            <h3> Media Women Network </h3>
-            <p> This website is the one I designed and created. It's a non-governmental website that speaks for female journalists in Somalia. </p>
-            <a href="https://mediawomennetwork.org/" class="btn">learn more</a>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/blog-img-3.jpg" alt="">
-            <h3> Uukow Media </h3>
-            <p>This website is the one I designed and created. It's a Blog website that made on my self i write the contents, and Our stories.</p>
-            <a href="https://uukow.com/" class="btn">learn more</a>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/blog-img-4.jpg" alt="">
-            <h3> Hotel Management System </h3>
-            <p>This System is the one I Developed and created. It's a System That Works hotels  to manage their reservations, bills, rooms, staffs etc. I use to Develope Backend PHP MYSQL BOOTSRTAP5 and Js Ajax</p>
-            <a href="https://github.com/Uukow/HotelManagement" class="btn">learn more</a>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/blog-img-4.jpg" alt="">
-            <h3> Hotel Management System </h3>
-            <p>This System is the one I Developed and created. It's a System That Works hotels  to manage their reservations, bills, rooms, staffs etc. I use to Develope Backend NODE.js MYSQL BOOTSRTAP5 and Js Ajax</p>
-            <a href="https://github.com/Uukow/HotelManagement" class="btn">learn more</a>
-        </div>
-
-        <div class="box tilt">
-            <img src="images/blog-img-5.jpg" alt="">
-            <h3> Cargo Front end website </h3>
-            <p>This Website is a Frontend only the one I Design and created. It's a Website That Works Cargo  Booking, Payment And Customer Information. i Use To develope this React.js bootstrap 4 and some javascript</p>
-            <a href="https://github.com/Uukow/Cargo-System-React-js" class="btn">learn more</a>
-        </div>
-
-        
-        <div class="box tilt">
-            <img src="images/blog-img-6.png" alt="">
-            <h3>Galmudug Women Journalists Association</h3>
-            <p> This website is the one I designed and created. It's a non-governmental website that speaks for female journalists in Galmudug State of Somalia. </p>
-            <a href="https://gwja.org/" class="btn">learn more</a>
-        </div>
-        
-        
-        <div class="box tilt">
-            <img src="images/blog-img-8.png" alt="">
-            <h3>GREEN MEDIA Initiative (GMI)</h3>
-            <p> This website is the one I designed and created. GMI is Somalia’s first green media hub, committed to promoting environmental awareness and sustainability. </p>
-            <a href="https://gmi.so/" class="btn">learn more</a>
-        </div>
-        
-        <div class="box tilt">
-            <img src="images/blog-img-7.png" alt="">
-            <h3>Association Management Platform</h3>
-            <p> The Association Management Platform is a robust system developed using Bootstrap, JavaScript, PHP, and MySQL, designed to streamline administrative tasks and enhance communication within associations. </p>
-            <a href="https://github.com/Uukow/Association-Management-Platform" class="btn">learn more</a>
-        </div>
-        <div class="box tilt">
-            <img src="images/blog-img-9.png" alt="">
-            <h3>Galayr Engineering and Architect Consulting</h3>
-            <p>  This website is the one I designed and created. GEAC provides construction and technical consultation services in the fields of civil works, building design, planning and management. </p>
-            <a href="https://geac.so/" class="btn">learn more</a>
-        </div>
-        <div class="box tilt">
-            <img src="images/blog-img-10.png" alt="">
-            <h3>Uukow Advertising Agency</h3>
-            <p>  This project is a responsive website developed using HTML, Bootstrap, FontAwesome, and React.js. It features a well-organized codebase, with assets, pages, components, and styles neatly arranged in the `src` folder for easy management and scalability. </p>
-            <a href="https://github.com/Uukow/Digital-Marketing-Website-using-React-jshttps://geac.so/" class="btn">learn more</a>
-        </div>
-
+<section class="blogs section" id="projects">
+    <div class="section__head">
+        <span class="section__num mono">03</span>
+        <p class="eyebrow">Shipped</p>
+        <h2 class="section__title">Selected Engineering Work</h2>
+        <p class="section__subtitle">A focused set of systems, dashboards, and public web platforms built with practical architecture and maintainable UI.</p>
     </div>
 
+    <div class="project-showcase">
+        <article class="project-card project-card--featured tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-4.jpg" alt="Hotel Management System dashboard">
+                <span class="project-card__label">Case study</span>
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">operations platform</span><span>Backend + UI</span></div>
+                <h3>Hotel Management System</h3>
+                <p>Hotel operations system for reservations, billing, rooms, and staff workflows with structured MySQL data and fast operator screens.</p>
+                <div class="project-card__stack"><span>PHP</span><span>Node.js</span><span>MySQL</span><span>Bootstrap 5</span><span>AJAX</span></div>
+                <dl class="project-card__details">
+                    <div><dt>Role</dt><dd>Full-stack developer</dd></div>
+                    <div><dt>Focus</dt><dd>Reservations, billing, admin tools</dd></div>
+                </dl>
+                <div class="project-card__actions">
+                    <a href="https://github.com/Uukow/HotelManagement" class="project-link project-link--primary" target="_blank" rel="noopener noreferrer">View code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card project-card--featured tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-7.png" alt="Association Management Platform">
+                <span class="project-card__label">System</span>
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">admin platform</span><span>Production-ready</span></div>
+                <h3>Association Management Platform</h3>
+                <p>Association operations platform for records, member workflows, communication, and admin visibility.</p>
+                <div class="project-card__stack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>Bootstrap</span></div>
+                <dl class="project-card__details">
+                    <div><dt>Role</dt><dd>System developer</dd></div>
+                    <div><dt>Focus</dt><dd>Data, dashboards, workflow UX</dd></div>
+                </dl>
+                <div class="project-card__actions">
+                    <a href="https://github.com/Uukow/Association-Management-Platform" class="project-link project-link--primary" target="_blank" rel="noopener noreferrer">View code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-5.jpg" alt="Cargo booking frontend">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">frontend app</span></div>
+                <h3>Cargo Booking UI</h3>
+                <p>Frontend booking flow for cargo customer information, payment context, and service requests.</p>
+                <div class="project-card__stack"><span>React</span><span>Bootstrap 4</span><span>SPA</span></div>
+                <div class="project-card__actions">
+                    <a href="https://github.com/Uukow/Cargo-System-React-js" class="project-link" target="_blank" rel="noopener noreferrer">View code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-10.png" alt="Uukow Advertising Agency">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">react website</span></div>
+                <h3>Uukow Advertising Agency</h3>
+                <p>Marketing agency website with reusable React components and organized assets for future scale.</p>
+                <div class="project-card__stack"><span>React</span><span>Components</span><span>Marketing</span></div>
+                <div class="project-card__actions">
+                    <a href="https://github.com/Uukow/Digital-Marketing-Website-using-React-js" class="project-link" target="_blank" rel="noopener noreferrer">View code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-2.jpg" alt="Media Women Network">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">ngo website</span></div>
+                <h3>Media Women Network</h3>
+                <p>Public web presence for a Somalia-based NGO advocating for female journalists.</p>
+                <div class="project-card__stack"><span>NGO</span><span>Content</span><span>Public site</span></div>
+                <div class="project-card__actions">
+                    <a href="https://mediawomennetwork.org/" class="project-link" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-8.png" alt="GREEN MEDIA Initiative">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">media platform</span></div>
+                <h3>GREEN MEDIA Initiative</h3>
+                <p>Environmental awareness platform for Somalia&apos;s green media hub.</p>
+                <div class="project-card__stack"><span>Media</span><span>Campaign</span><span>Content</span></div>
+                <div class="project-card__actions">
+                    <a href="https://gmi.so/" class="project-link" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-1.jpg" alt="Feynuus Shop">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">commerce</span></div>
+                <h3>Feynuus Shop</h3>
+                <p>E-commerce storefront serving Mogadishu with product-focused browsing and conversion paths.</p>
+                <div class="project-card__stack"><span>E-commerce</span><span>UX</span><span>Production</span></div>
+                <div class="project-card__actions">
+                    <a href="https://feynuusshop/" class="project-link" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-6.png" alt="GWJA">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">ngo website</span></div>
+                <h3>Galmudug Women Journalists Association</h3>
+                <p>Regional NGO site supporting women journalists in Galmudug State.</p>
+                <div class="project-card__stack"><span>NGO</span><span>Regional</span><span>Public site</span></div>
+                <div class="project-card__actions">
+                    <a href="https://gwja.org/" class="project-link" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </article>
+
+        <article class="project-card tilt">
+            <div class="project-card__media">
+                <img src="images/blog-img-9.png" alt="Galayr Engineering">
+            </div>
+            <div class="project-card__body">
+                <div class="project-card__topline"><span class="mono">b2b website</span></div>
+                <h3>Galayr Engineering &amp; Architect Consulting</h3>
+                <p>Company site for civil works, building design, planning, and management services.</p>
+                <div class="project-card__stack"><span>B2B</span><span>Services</span><span>Consulting</span></div>
+                <div class="project-card__actions">
+                    <a href="https://geac.so/" class="project-link" target="_blank" rel="noopener noreferrer">Visit site <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </article>
+    </div>
 </section>
 
-<!-- blogs section ends -->
+<section class="portfolio section" id="gallery">
+    <div class="section__head">
+        <span class="section__num mono">04</span>
+        <p class="eyebrow">Visuals</p>
+        <h2 class="section__title">Gallery</h2>
+        <p class="section__subtitle">Selected visuals — composition, UI surfaces, and brand-facing layout.</p>
+    </div>
 
-<!-- contact section starts  -->
+    <div class="mosaic">
+        <div class="mosaic__item tilt"><img src="images/img-1.jpg" alt="Portfolio piece 1"><div class="mosaic__overlay"><span class="mono">01</span></div></div>
+        <div class="mosaic__item tilt"><img src="images/img-2.jpg" alt="Portfolio piece 2"><div class="mosaic__overlay"><span class="mono">02</span></div></div>
+        <div class="mosaic__item tilt"><img src="images/img-3.jpg" alt="Portfolio piece 3"><div class="mosaic__overlay"><span class="mono">03</span></div></div>
+        <div class="mosaic__item tilt"><img src="images/img-4.jpg" alt="Portfolio piece 4"><div class="mosaic__overlay"><span class="mono">04</span></div></div>
+        <div class="mosaic__item tilt"><img src="images/img-5.jpg" alt="Portfolio piece 5"><div class="mosaic__overlay"><span class="mono">05</span></div></div>
+        <div class="mosaic__item tilt"><img src="images/img-6.jpg" alt="Portfolio piece 6"><div class="mosaic__overlay"><span class="mono">06</span></div></div>
+    </div>
+</section>
 
-<section class="contact" id="contact">
+<section class="contact section" id="contact">
+    <div class="section__head">
+        <span class="section__num mono">05</span>
+        <p class="eyebrow">Collaborate</p>
+        <h2 class="section__title">Contact</h2>
+        <p class="section__subtitle">Share scope, deadline, and stack preferences — you&apos;ll get a straight answer on fit and next steps.</p>
+    </div>
 
-    <h1 class="heading"> contact <span> me </span> </h1>
-
-    <div class="row">
-
-        <div class="image">
-            <img class="tilt" src="images/contact-img.svg" alt="">
+    <div class="contact__layout">
+        <div class="contact__aside">
+            <div class="contact__panel">
+                <span class="contact__status"><i class="fas fa-circle" aria-hidden="true"></i> Available for selected projects</span>
+                <h3>Let&apos;s build something maintainable.</h3>
+                <p>Send the goal, rough scope, deadline, and preferred stack. I&apos;ll reply with a practical plan and the fastest path to ship.</p>
+                <div class="contact__work">
+                    <span>Full-stack apps</span>
+                    <span>Dashboards</span>
+                    <span>NGO platforms</span>
+                    <span>E-commerce</span>
+                </div>
+                <div class="contact__direct">
+                    <a class="contact__pill" href="mailto:Abdulkadiruukow@gmail.com"><i class="fas fa-envelope"></i> Abdulkadiruukow@gmail.com</a>
+                    <a class="contact__pill" href="tel:+252617119990"><i class="fas fa-phone"></i> +252 61 711 9990</a>
+                    <a class="contact__pill" href="https://wa.link/3lznht" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a class="contact__pill" href="https://github.com/Uukow" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> github.com/Uukow</a>
+                </div>
+            </div>
         </div>
 
-        <form action="">
-
-            <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+        <form class="contact-form" id="contact-form" action="#" method="post">
+            <div class="contact-form__head">
+                <span class="mono">project brief</span>
+                <h3>Start a conversation</h3>
             </div>
-
-            <input type="text" placeholder="subject" class="box">
-
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-
-            <input type="submit" class="btn" value="send message">
-
+            <div class="contact-form__row">
+                <label class="sr-only" for="cf-name">Name</label>
+                <input id="cf-name" name="name" type="text" placeholder="Name" autocomplete="name">
+                <label class="sr-only" for="cf-email">Email</label>
+                <input id="cf-email" name="email" type="email" placeholder="Email" autocomplete="email">
+            </div>
+            <label class="sr-only" for="cf-subject">Subject</label>
+            <input id="cf-subject" name="subject" type="text" placeholder="Subject">
+            <label class="sr-only" for="cf-body">Message</label>
+            <textarea id="cf-body" name="body" placeholder="Message" rows="8"></textarea>
+            <button type="submit" class="btn">Open in email client</button>
+            <p class="contact-form__hint">Submit opens your mail app with this message prefilled. For faster replies, use WhatsApp.</p>
         </form>
-
     </div>
-
 </section>
 
-<!-- contact section ends -->
+</main>
 
-<!-- footer section  -->
+<footer class="site-footer">
+    <p><span class="mono">&copy;</span> <span id="year"></span> Abdulkadir Uukow · Software engineer · Mogadishu</p>
+    <div class="site-footer__links" aria-label="Social links">
+        <a href="https://github.com/Uukow" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.facebook.com/Uukow2017" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:Abdulkadiruukow@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+    </div>
+</footer>
 
-<div class="footer"> created by <span> <a href="https://www.facebook.com/Uukow2017"> Abdulkadir Uukow </a></span> | all rights reserved! </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- javascript part  -->
-
-<!-- typed.js link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-
-<!-- particles.js links  -->
 <script src="js/particles.min.js"></script>
 <script src="js/app.js"></script>
-
-<!-- vanilla-tilt.js link  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
 <script>
+(function () {
+    var THEME_KEY = "uukow-theme";
 
-let menu = document.querySelector('#menu-bars');
-let header = document.querySelector('header');
+    function syncThemeUi() {
+        var theme = document.documentElement.getAttribute("data-theme") || "dark";
+        var meta = document.getElementById("meta-theme-color");
+        if (meta) meta.setAttribute("content", theme === "light" ? "#f6f8fa" : "#0d1117");
+        var tb = document.getElementById("theme-toggle");
+        if (tb) {
+            tb.setAttribute("aria-pressed", theme === "light" ? "true" : "false");
+            tb.setAttribute("title", theme === "light" ? "Switch to dark theme" : "Switch to light theme");
+            tb.setAttribute("aria-label", tb.getAttribute("title"));
+        }
+    }
 
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    header.classList.toggle('active');
-}
+    syncThemeUi();
 
-window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    header.classList.remove('active');
-};
+    var themeBtn = document.getElementById("theme-toggle");
+    if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+            var next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", next);
+            try {
+                localStorage.setItem(THEME_KEY, next);
+            } catch (e) {}
+            syncThemeUi();
+            if (typeof window.initParticlesBackground === "function") window.initParticlesBackground();
+        });
+    }
 
-var typed = new Typed('.typing-text', {
-    strings : ['Youtuber','Facebooker','front end developer', 'web designer','Video Editor', 'graphic designer', 'web developer' ],
-    loop : true,
-    typeSpeed : 150
-});
+    var toggle = document.querySelector("#menu-toggle");
+    var header = document.querySelector('.site-header');
 
-VanillaTilt.init(document.querySelectorAll('.tilt'),{
-    max:25
-});
+    function closeMenu() {
+        if (!toggle || !header) return;
+        toggle.setAttribute('aria-expanded', 'false');
+        header.classList.remove('nav-open');
+        document.body.classList.remove('menu-open');
+    }
 
+    function openMenu() {
+        toggle.setAttribute('aria-expanded', 'true');
+        header.classList.add('nav-open');
+        document.body.classList.add('menu-open');
+    }
+
+    if (toggle) {
+        toggle.addEventListener('click', function () {
+            var open = toggle.getAttribute('aria-expanded') === 'true';
+            if (open) closeMenu(); else openMenu();
+        });
+    }
+
+    document.querySelectorAll('.site-nav a').forEach(function (a) {
+        a.addEventListener('click', closeMenu);
+    });
+
+    window.addEventListener('scroll', function () {
+        closeMenu();
+        if (header) header.classList.toggle('is-scrolled', window.scrollY > 24);
+    }, { passive: true });
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 900) closeMenu();
+    });
+
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    var form = document.getElementById('contact-form');
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var nameEl = document.getElementById('cf-name');
+            var emailEl = document.getElementById('cf-email');
+            var subjectEl = document.getElementById('cf-subject');
+            var bodyEl = document.getElementById('cf-body');
+            var name = nameEl && nameEl.value ? nameEl.value.trim() : '';
+            var email = emailEl && emailEl.value ? emailEl.value.trim() : '';
+            var subject = subjectEl && subjectEl.value ? subjectEl.value.trim() : 'Portfolio inquiry';
+            var body = bodyEl && bodyEl.value ? bodyEl.value.trim() : '';
+            var composed = '';
+            if (name) composed += 'Name: ' + name + '\n';
+            if (email) composed += 'Reply-to: ' + email + '\n\n';
+            composed += body;
+            window.location.href = 'mailto:Abdulkadiruukow@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(composed);
+        });
+    }
+
+    if (typeof Typed !== 'undefined') {
+        new Typed('.typing-text', {
+            strings: [
+                'production-ready web apps',
+                'React and JavaScript interfaces',
+                'PHP and Node.js APIs',
+                'MySQL-backed systems',
+                'sites that ship'
+            ],
+            loop: true,
+            typeSpeed: 55,
+            backSpeed: 35,
+            backDelay: 1400,
+            smartBackspace: true
+        });
+    }
+
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(document.querySelectorAll('.tilt'), { max: 12, speed: 600, glare: true, 'max-glare': 0.18 });
+    }
+})();
 </script>
 
 </body>

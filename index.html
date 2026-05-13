@@ -38,6 +38,7 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#expertise">Expertise</a>
+        <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#credentials">Certificates</a>
@@ -72,22 +73,33 @@
             </div>
         </div>
         <div class="home__intro">
-            <p class="eyebrow">Expert software engineer · Mogadishu</p>
-            <h1 class="home__title">Abdulkadir <span class="home__title-accent">Uukow</span></h1>
-            <p class="home__role">I build <span class="typing-text">production-grade software systems</span></p>
-            <p class="home__lede">I architect and deliver high-impact software systems across web, operations, and communication environments: robust data models, API-first backends, and resilient interfaces that teams can evolve confidently in complex, real-world settings.</p>
-            <div class="home__code code-window">
-                <div class="code-window__chrome" aria-hidden="true">
-                    <span></span><span></span><span></span>
+            <div class="home__intro-surface">
+                <div class="home__badges" aria-label="Status">
+                    <span class="home__badge home__badge--live"><span class="home__badge-dot" aria-hidden="true"></span> Open to freelance &amp; contracts</span>
+                    <span class="home__badge home__badge--ghost mono">COO · UTECH</span>
+                    <span class="home__badge home__badge--ghost mono">Full-stack · Mobile · Cloud</span>
                 </div>
-                <pre class="code-window__body mono"><code><span class="code-line"><span class="code-muted">// What I optimize for</span></span>
+                <p class="eyebrow">Expert software engineer · Mogadishu</p>
+                <h1 class="home__title">Abdulkadir <span class="home__title-accent">Uukow</span></h1>
+                <p class="home__role">I build <span class="typing-text">production-grade software systems</span></p>
+                <p class="home__lede">I architect and deliver high-impact software systems across web, operations, and communication environments: robust data models, API-first backends, and resilient interfaces that teams can evolve confidently in complex, real-world settings.</p>
+                <div class="home__code code-window">
+                    <div class="code-window__chrome" aria-hidden="true">
+                        <div class="code-window__dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <span class="code-window__filename mono">delivery.ts</span>
+                    </div>
+                    <pre class="code-window__body mono"><code><span class="code-line"><span class="code-muted">// What I optimize for</span></span>
 <span class="code-line"><span class="code-k">const</span> delivery = {</span>
 <span class="code-line">  <span class="code-prop">stack</span>: [<span class="code-s">&apos;JS&apos;</span>, <span class="code-s">&apos;React&apos;</span>, <span class="code-s">&apos;Flutter&apos;</span>, <span class="code-s">&apos;PHP&apos;</span>, <span class="code-s">&apos;Node&apos;</span>, <span class="code-s">&apos;MySQL&apos;</span>, <span class="code-s">&apos;AWS&apos;</span>],</span>
 <span class="code-line">  <span class="code-prop">goal</span>: <span class="code-s">&apos;scalable systems and measurable outcomes&apos;</span></span>
 <span class="code-line">};</span></code></pre>
+                </div>
             </div>
             <div class="home__actions">
                 <a href="#projects" class="btn">Selected work</a>
+                <a href="#experience" class="btn btn--outline">Experience</a>
                 <a href="https://github.com/Uukow" class="btn btn--ghost" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
             </div>
             <ul class="home__metrics" aria-label="Highlights">
@@ -112,47 +124,85 @@
         <p class="section__subtitle">End-to-end engineering leadership from discovery and architecture to deployment, support, and iteration.</p>
     </div>
 
-    <div class="about__grid">
-        <div class="about__photo tilt">
-            <img src="images/about-pic.jpg" alt="Abdulkadir Uukow working">
-        </div>
-        <div class="about__copy">
-            <h3 class="about__name">Abdulkadir Uukow</h3>
-            <p class="about__text">I&apos;m an expert software engineer with multi-year experience delivering production systems for NGOs, institutions, and private companies. My work spans architecture, backend engineering, frontend and mobile delivery, operations support, and technical leadership. I build maintainable platforms with PHP/Node.js, MySQL, JavaScript, and Flutter, while supporting cloud, AI/ML, and communication workflows where cross-functional ownership is critical.</p>
-            <div class="about__panels">
-                <div class="panel">
-                    <h4 class="panel__title">Focus</h4>
-                    <ul class="panel__list">
-                        <li>Software architecture, full-stack, and mobile delivery</li>
-                        <li>Enterprise workflows for NGOs, institutions, and SMEs</li>
-                        <li>Scalable dashboards, portals, automation, and reporting</li>
+    <div class="about__shell">
+        <div class="about__grid">
+            <aside class="about__visual">
+                <figure class="about__figure">
+                    <div class="about__photo tilt">
+                        <img src="images/about-pic.jpg" alt="Abdulkadir Uukow working" width="800" height="1000" loading="lazy">
+                    </div>
+                    <figcaption class="about__figure-cap mono">Mogadishu · Wadajir · Somalia</figcaption>
+                </figure>
+                <div class="about__highlights" aria-label="Profile highlights">
+                    <p class="about__highlights-title mono">At a glance</p>
+                    <ul class="about__stat-grid" role="list">
+                        <li class="about__stat">
+                            <span class="about__stat-val mono">5+</span>
+                            <span class="about__stat-lbl">years shipping</span>
+                        </li>
+                        <li class="about__stat">
+                            <span class="about__stat-val mono">15+</span>
+                            <span class="about__stat-lbl">projects delivered</span>
+                        </li>
+                        <li class="about__stat">
+                            <span class="about__stat-val mono">4</span>
+                            <span class="about__stat-lbl">current &amp; past roles</span>
+                        </li>
+                        <li class="about__stat">
+                            <span class="about__stat-val mono">20+</span>
+                            <span class="about__stat-lbl">CV skills listed</span>
+                        </li>
+                    </ul>
+                    <p class="about__domains">Sectors: NGOs, training institutes, utilities consultancy, technology products, and media.</p>
+                    <ul class="about__lang" aria-label="Languages">
+                        <li><span class="mono">EN</span> English</li>
+                        <li><span class="mono">SO</span> Somali</li>
+                        <li><span class="mono">AR</span> Arabic</li>
                     </ul>
                 </div>
-                <div class="panel">
-                    <h4 class="panel__title">Stack</h4>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">React</span>
-                        <span class="tag">Flutter Mobile App</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">AI/ML</span>
-                        <span class="tag">Communication Skills</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">WordPress</span>
+            </aside>
+            <div class="about__copy">
+                <p class="about__kicker mono">Expert software engineer · COO &amp; systems builder</p>
+                <h3 class="about__name">Abdulkadir Uukow</h3>
+                <p class="about__text">I&apos;m an expert software engineer with multi-year experience delivering production systems for NGOs, institutions, and private companies. My work spans architecture, backend engineering, frontend and mobile delivery, operations support, and technical leadership. I build maintainable platforms with PHP/Node.js, MySQL, JavaScript, and Flutter, while supporting cloud, AI/ML, and communication workflows where cross-functional ownership is critical.</p>
+                <div class="about__panels">
+                    <div class="panel panel--about">
+                        <h4 class="panel__title"><i class="fas fa-crosshairs" aria-hidden="true"></i> Focus</h4>
+                        <ul class="panel__list">
+                            <li>Software architecture, full-stack, and mobile delivery</li>
+                            <li>Enterprise workflows for NGOs, institutions, and SMEs</li>
+                            <li>Scalable dashboards, portals, automation, and reporting</li>
+                        </ul>
+                    </div>
+                    <div class="panel panel--about">
+                        <h4 class="panel__title"><i class="fas fa-code" aria-hidden="true"></i> Stack</h4>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Flutter Mobile App</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">AWS</span>
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Communication Skills</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">WordPress</span>
+                        </div>
                     </div>
                 </div>
+                <div class="about__facts">
+                    <div class="fact"><span class="fact__label">Experience</span><span class="fact__value">5+ years</span></div>
+                    <div class="fact"><span class="fact__label">Availability</span><span class="fact__value">Freelance</span></div>
+                    <div class="fact"><span class="fact__label">Email</span><span class="fact__value"><a href="mailto:Abdulkadiruukow@gmail.com">Abdulkadiruukow@gmail.com</a></span></div>
+                    <div class="fact"><span class="fact__label">Phone</span><span class="fact__value"><a href="tel:+252615031623">+252 61 503 1623</a></span></div>
+                    <div class="fact fact--wide"><span class="fact__label">Location</span><span class="fact__value">Wadajir, Mogadishu · Somalia</span></div>
+                </div>
+                <div class="about__actions">
+                    <a href="https://wa.link/3lznht" class="btn" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
+                    <a href="#experience" class="btn btn--ghost">View experience</a>
+                </div>
             </div>
-            <div class="about__facts">
-                <div class="fact"><span class="fact__label">Experience</span><span class="fact__value">5+ years</span></div>
-                <div class="fact"><span class="fact__label">Availability</span><span class="fact__value">Freelance</span></div>
-                <div class="fact"><span class="fact__label">Email</span><span class="fact__value"><a href="mailto:Abdulkadiruukow@gmail.com">Abdulkadiruukow@gmail.com</a></span></div>
-                <div class="fact"><span class="fact__label">Phone</span><span class="fact__value"><a href="tel:+252615031623">+252 61 503 1623</a></span></div>
-                <div class="fact fact--wide"><span class="fact__label">Location</span><span class="fact__value">Wadajir, Mogadishu · Somalia</span></div>
-            </div>
-            <a href="https://wa.link/3lznht" class="btn" target="_blank" rel="noopener noreferrer">Contact on WhatsApp</a>
         </div>
     </div>
 </section>
@@ -199,9 +249,42 @@
     </div>
 </section>
 
-<section class="experience section" id="experience">
+<section class="skills section" id="skills">
     <div class="section__head">
         <span class="section__num mono">03</span>
+        <p class="eyebrow">Skills &amp; competencies</p>
+        <h2 class="section__title">Skills</h2>
+        <p class="section__subtitle">Capabilities listed under &quot;Skills and attained&quot; in my curriculum vitae — spanning engineering, ICT, media, documentation, and leadership.</p>
+    </div>
+    <div class="skills__shell">
+        <ul class="skills__cloud" role="list" aria-label="Skills from curriculum vitae">
+            <li class="skills__item"><span class="skills__chip">Teamwork to Achieve Excellence</span></li>
+            <li class="skills__item"><span class="skills__chip">Graphic Design</span></li>
+            <li class="skills__item"><span class="skills__chip">Video Editing</span></li>
+            <li class="skills__item"><span class="skills__chip">Content Writing</span></li>
+            <li class="skills__item"><span class="skills__chip">Communication Skills</span></li>
+            <li class="skills__item"><span class="skills__chip">Web Design &amp; Development</span></li>
+            <li class="skills__item"><span class="skills__chip">Software Development</span></li>
+            <li class="skills__item"><span class="skills__chip">Digital Marketing</span></li>
+            <li class="skills__item"><span class="skills__chip">ICT Management &amp; Technical Support</span></li>
+            <li class="skills__item"><span class="skills__chip">Social Media Management</span></li>
+            <li class="skills__item"><span class="skills__chip">Website Management</span></li>
+            <li class="skills__item"><span class="skills__chip">Report Writing &amp; Documentation</span></li>
+            <li class="skills__item"><span class="skills__chip">Meeting Minutes Preparation</span></li>
+            <li class="skills__item"><span class="skills__chip">Database Management (MySQL)</span></li>
+            <li class="skills__item"><span class="skills__chip">UI/UX Design</span></li>
+            <li class="skills__item"><span class="skills__chip">Multimedia Production</span></li>
+            <li class="skills__item"><span class="skills__chip">Leadership &amp; Team Management</span></li>
+            <li class="skills__item"><span class="skills__chip">Problem Solving &amp; Analytical Skills</span></li>
+            <li class="skills__item"><span class="skills__chip">Project Management</span></li>
+            <li class="skills__item"><span class="skills__chip">Time Management &amp; Creativity</span></li>
+        </ul>
+    </div>
+</section>
+
+<section class="experience section" id="experience">
+    <div class="section__head">
+        <span class="section__num mono">04</span>
         <p class="eyebrow">Career</p>
         <h2 class="section__title">Work experience</h2>
         <p class="section__subtitle">Roles from my curriculum vitae, listed in chronological order by start date. Engineering delivery, ICT leadership, and cross-functional communication across organizations in Somalia.</p>
@@ -279,7 +362,7 @@
 
 <section class="blogs section" id="projects">
     <div class="section__head">
-        <span class="section__num mono">04</span>
+        <span class="section__num mono">05</span>
         <p class="eyebrow">Shipped</p>
         <h2 class="section__title">Selected Engineering Work</h2>
         <p class="section__subtitle">A focused set of systems, dashboards, and public web platforms built with practical architecture and maintainable UI.</p>
@@ -478,7 +561,7 @@
 
 <section class="credentials section" id="credentials">
     <div class="section__head">
-        <span class="section__num mono">05</span>
+        <span class="section__num mono">06</span>
         <p class="eyebrow">Education</p>
         <h2 class="section__title">Credentials &amp; certificates</h2>
         <p class="section__subtitle">Formal education and professional programs as listed on my curriculum vitae — aligned with continuous delivery in software engineering.</p>
@@ -670,7 +753,7 @@
 
 <section class="portfolio section" id="gallery">
     <div class="section__head">
-        <span class="section__num mono">06</span>
+        <span class="section__num mono">07</span>
         <p class="eyebrow">Visuals</p>
         <h2 class="section__title">Gallery</h2>
         <p class="section__subtitle">Selected visuals — composition, UI surfaces, and brand-facing layout.</p>
@@ -688,7 +771,7 @@
 
 <section class="contact section" id="contact">
     <div class="section__head">
-        <span class="section__num mono">07</span>
+        <span class="section__num mono">08</span>
         <p class="eyebrow">Collaborate</p>
         <h2 class="section__title">Contact</h2>
         <p class="section__subtitle">Share scope, deadline, and stack preferences — you&apos;ll get a straight answer on fit and next steps.</p>

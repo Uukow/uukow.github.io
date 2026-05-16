@@ -81,7 +81,10 @@
                 </div>
                 <p class="eyebrow">Expert software engineer · Mogadishu</p>
                 <h1 class="home__title">Abdulkadir <span class="home__title-accent">Uukow</span></h1>
-                <p class="home__role">I build <span class="typing-text">production-grade software systems</span></p>
+                <p class="home__role">
+                    <span class="home__role-label">I build</span>
+                    <span class="home__role-typed" aria-live="polite"><span class="typing-text">production-grade software systems</span></span>
+                </p>
                 <p class="home__lede">I architect and deliver high-impact software systems across web, operations, and communication environments: robust data models, API-first backends, and resilient interfaces that teams can evolve confidently in complex, real-world settings.</p>
                 <div class="home__code code-window">
                     <div class="code-window__chrome" aria-hidden="true">
@@ -932,8 +935,16 @@
     }
 
     if (typeof Typed !== 'undefined') {
-        new Typed('.typing-text', {
-            strings: [
+        var typedStrings = window.matchMedia('(max-width: 900px)').matches
+            ? [
+                'production software',
+                'scalable backends',
+                'Flutter mobile apps',
+                'React interfaces',
+                'API-first systems',
+                'cloud-ready delivery'
+            ]
+            : [
                 'production-grade software systems',
                 'architecture and scalable backends',
                 'PHP, Node.js, and MySQL platforms',
@@ -941,7 +952,9 @@
                 'React and JavaScript interfaces',
                 'cloud-ready web delivery',
                 'clear technical communication'
-            ],
+            ];
+        new Typed('.typing-text', {
+            strings: typedStrings,
             loop: true,
             typeSpeed: 55,
             backSpeed: 35,

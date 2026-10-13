@@ -3079,6 +3079,20 @@ a:hover {
   align-self: flex-start;
 }
 
+.cert-pill--live {
+  color: var(--green-glow);
+  border-color: color-mix(in srgb, var(--green-glow) 35%, var(--border));
+  background: color-mix(in srgb, var(--green-glow) 12%, transparent);
+  align-self: flex-start;
+}
+
+.cert-card__degree-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .cert-card__title {
   margin: 0;
   font-size: clamp(1.52rem, 1.65vw, 1.82rem);
